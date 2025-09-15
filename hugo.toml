@@ -1,0 +1,81 @@
+title = "MerakiART"
+baseURL = "https://gaokxuan.github.io/merakiart/"
+theme = "resume"
+languageCode = "en-us"
+PygmentsCodeFences = true
+PygmentsCodeFencesGuessSyntax = true
+PygmentsStyle = "monokai"
+enableGitInfo = false
+
+[params]
+address = "San Francisco Bay Area"
+email = "merakiartphoto@gmail.com"
+favicon = "/favicon.ico"
+firstName = "Shuhan"
+lastName = ""
+phone = "1-206-530-9202"
+profileImage = "img/photographer-portrait.jpeg"
+showQr = false
+showContact = true
+showBoards = false
+showCertifications = false
+showSocializations = true
+sections = []
+
+# Photography-specific parameters
+[params.photography]
+tagline = "Showing People How Beautiful They Are"
+specialties = ["Couples Photography", "Portrait Photography", "Events Photography"]
+yearsExperience = "3+"
+location = "SF Bay Area & Surrounding Areas"
+
+[params.google]
+
+[params.google.analytics]
+trackerID = ""
+
+# Social media handles for photographer
+[[params.handles]]
+    name = "Instagram"
+    link = "https://instagram.com/merakiart_photography"
+    icon = "instagram"
+
+[[params.handles]]
+    name = "Pinterest"
+    link = "https://pinterest.com/merakiart_photography"
+    icon = "pinterest"
+
+[[params.handles]]
+    name = "RedNote"
+    link = "https://xiaohongshu.com/user/profile/merakiart"
+    icon = "book"
+
+[[params.handles]]
+    name = "Facebook"
+    link = "https://facebook.com/merakiart.photography"
+    icon = "facebook"
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[taxonomies]
+tag = "tags"
+
+# Menu configuration for photography site
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
+    weight = 10
+  [[menu.main]]
+    name = "Gallery"
+    url = "/services/"
+    weight = 20
+  [[menu.main]]
+    name = "Pricing"
+    url = "/pricing/"
+    weight = 30
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 40

@@ -1,0 +1,157 @@
+{{ define "main" }}
+<div class="container-fluid p-0">
+  <!-- Minimal Pricing Section -->
+  <section class="pricing-minimal-section">
+    <div class="container">
+      <!-- Compact Pricing Cards -->
+      <div class="row pricing-cards-compact">
+        {{ $pricing := .Site.Data.pricing }}
+        {{ range $pricing }}
+        <div class="col-lg-4 mb-3">
+          <div class="card pricing-card-minimal {{ if .popular }}border-primary{{ end }}">
+            {{ if .popular }}
+            <div class="card-header bg-primary text-white text-center py-2">
+              <small class="mb-0">Most Popular</small>
+            </div>
+            {{ end }}
+
+            <div class="card-body text-center p-3">
+              <h4 class="card-title mb-2">{{ .name }}</h4>
+              <h3 class="text-primary mb-2">{{ .price }}</h3>
+              <p class="text-muted small mb-3">{{ .duration }}</p>
+
+              <!-- Key Features (limited) -->
+              <ul class="list-unstyled mb-3 small">
+                {{ range first 3 .features }}
+                <li class="mb-1">
+                  <i class="fa fa-check text-primary mr-1"></i>
+                  {{ . }}
+                </li>
+                {{ end }}
+              </ul>
+
+              <!-- Call to Action -->
+              <a href="{{ .cta_link }}" class="btn {{ if .popular }}btn-primary{{ else }}btn-outline-primary{{ end }} btn-sm">
+                {{ .cta_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- Compact Payment Information -->
+      <div class="row mt-4">
+        <div class="col-lg-12">
+          <div class="card bg-light payment-info-compact">
+            <div class="card-body p-3">
+              <h5 class="card-title mb-3 text-center">Payment & Booking Information</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <h6 class="small">Booking Process:</h6>
+                  <ul class="list-unstyled small mb-3">
+                    <li>• 50% deposit required to secure your date</li>
+                    <li>• Remaining balance due before session</li>
+                    <li>• Payment plans available for larger packages</li>
+                    <li>• All major credit cards accepted</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="small">What's Included:</h6>
+                  <ul class="list-unstyled small mb-3">
+                    <li>• Pre-session consultation</li>
+                    <li>• Professional editing and retouching</li>
+                    <li>• High-resolution digital downloads</li>
+                    <li>• Print release for personal use</li>
+                    <li>• Online gallery for easy sharing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+/* Minimal Pricing Page Styles */
+.pricing-minimal-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  background: #fafafa;
+}
+
+.pricing-cards-compact {
+  margin-bottom: 2rem;
+}
+
+.pricing-card-minimal {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
+  border-radius: 12px;
+}
+
+.pricing-card-minimal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.payment-info-compact {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.border-primary {
+  border-width: 2px !important;
+}
+
+.btn-primary {
+  background-color: #BD5D38;
+  border-color: #BD5D38;
+}
+
+.btn-primary:hover {
+  background-color: #824027;
+  border-color: #824027;
+}
+
+.btn-outline-primary {
+  color: #BD5D38;
+  border-color: #BD5D38;
+}
+
+.btn-outline-primary:hover {
+  background-color: #BD5D38;
+  border-color: #BD5D38;
+}
+
+.text-primary {
+  color: #BD5D38 !important;
+}
+
+.bg-primary {
+  background-color: #BD5D38 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .pricing-minimal-section {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-cards-compact .col-lg-4 {
+    margin-bottom: 1rem;
+  }
+
+  .payment-info-compact .card-body {
+    padding: 1.5rem !important;
+  }
+}
+</style>
+{{ end }}

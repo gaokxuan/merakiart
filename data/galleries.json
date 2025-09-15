@@ -1,0 +1,188 @@
+{
+  "couples": [
+    {
+      "image": "img/gallery/couples/DJI_20250223072729_0028_D.jpeg",
+      "alt": "Romantic engagement session in golden hour light",
+      "caption": "Sarah & Michael - Engagement Session"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223072805_0029_D.jpeg",
+      "alt": "Intimate couple portrait in urban setting",
+      "caption": "Emma & David - Anniversary Photos"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223074425_0043_D.jpeg",
+      "alt": "Couple laughing together in natural outdoor setting",
+      "caption": "Jessica & Ryan - Couple Session"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223075009_0056_D.jpeg",
+      "alt": "Romantic sunset couple silhouette",
+      "caption": "Maria & Carlos - Engagement"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223080031_0064_D.jpeg",
+      "alt": "Couple walking hand in hand through park",
+      "caption": "Ashley & James - Love Story"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223072729_0028_D.jpeg",
+      "alt": "Romantic engagement session in golden hour light",
+      "caption": "Lisa & Mark - Engagement"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223072805_0029_D.jpeg",
+      "alt": "Intimate couple portrait in urban setting",
+      "caption": "Jennifer & Alex - Anniversary"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223074425_0043_D.jpeg",
+      "alt": "Couple laughing together in natural outdoor setting",
+      "caption": "Amanda & Chris - Couple Session"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223075009_0056_D.jpeg",
+      "alt": "Romantic sunset couple silhouette",
+      "caption": "Nicole & Ryan - Engagement"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223080031_0064_D.jpeg",
+      "alt": "Couple walking hand in hand through park",
+      "caption": "Rachel & Tom - Love Story"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223072729_0028_D.jpeg",
+      "alt": "Romantic engagement session in golden hour light",
+      "caption": "Katie & James - Engagement"
+    },
+    {
+      "image": "img/gallery/couples/DJI_20250223072805_0029_D.jpeg",
+      "alt": "Intimate couple portrait in urban setting",
+      "caption": "Sophie & David - Anniversary"
+    }
+  ],
+  "portraits": [
+    {
+      "image": "img/gallery/portraits/DJI_20250208174148_0041_D.jpeg",
+      "alt": "Professional business headshot with natural lighting",
+      "caption": "Professional Headshot - Corporate"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174929_0049_D.jpeg",
+      "alt": "Family portrait with parents and two children",
+      "caption": "The Johnson Family"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174939_0050_D.jpeg",
+      "alt": "High school senior portrait in graduation cap",
+      "caption": "Senior Portrait - Graduation"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174148_0041_D.jpeg",
+      "alt": "Professional business headshot with natural lighting",
+      "caption": "Executive Portrait - Business"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174929_0049_D.jpeg",
+      "alt": "Family portrait with parents and two children",
+      "caption": "The Smith Family"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174939_0050_D.jpeg",
+      "alt": "High school senior portrait in graduation cap",
+      "caption": "Senior Portrait - College Bound"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174148_0041_D.jpeg",
+      "alt": "Professional business headshot with natural lighting",
+      "caption": "Corporate Headshot - Professional"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174929_0049_D.jpeg",
+      "alt": "Family portrait with parents and two children",
+      "caption": "The Williams Family"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174939_0050_D.jpeg",
+      "alt": "High school senior portrait in graduation cap",
+      "caption": "Senior Portrait - Achievement"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174148_0041_D.jpeg",
+      "alt": "Professional business headshot with natural lighting",
+      "caption": "Business Portrait - Leadership"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174929_0049_D.jpeg",
+      "alt": "Family portrait with parents and two children",
+      "caption": "The Davis Family"
+    },
+    {
+      "image": "img/gallery/portraits/DJI_20250208174939_0050_D.jpeg",
+      "alt": "High school senior portrait in graduation cap",
+      "caption": "Senior Portrait - Future Ready"
+    }
+  ],
+  "events": [
+    {
+      "image": "img/gallery/events/A7403169.jpeg",
+      "alt": "Wedding ceremony moment with bride and groom",
+      "caption": "Wedding Ceremony - First Kiss"
+    },
+    {
+      "image": "img/gallery/events/A7403190.jpeg",
+      "alt": "Birthday party celebration with family",
+      "caption": "50th Birthday Celebration"
+    },
+    {
+      "image": "img/gallery/events/A7403203.jpeg",
+      "alt": "Corporate event with team members networking",
+      "caption": "Corporate Annual Meeting"
+    },
+    {
+      "image": "img/gallery/events/A7403217.jpeg",
+      "alt": "Wedding reception dance floor moments",
+      "caption": "Wedding Reception - First Dance"
+    },
+    {
+      "image": "img/gallery/events/A7403220.jpeg",
+      "alt": "Graduation party with family and friends",
+      "caption": "College Graduation Party"
+    },
+    {
+      "image": "img/gallery/events/A7403229.jpeg",
+      "alt": "Baby shower celebration with decorations",
+      "caption": "Baby Shower - Welcome Baby"
+    },
+    {
+      "image": "img/gallery/events/A7403233.jpeg",
+      "alt": "Wedding detail shot of rings and flowers",
+      "caption": "Wedding Details - Rings & Bouquet"
+    },
+    {
+      "image": "img/gallery/events/A7403169.jpeg",
+      "alt": "Wedding ceremony moment with bride and groom",
+      "caption": "Wedding Ceremony - Vows"
+    },
+    {
+      "image": "img/gallery/events/A7403190.jpeg",
+      "alt": "Birthday party celebration with family",
+      "caption": "Anniversary Celebration"
+    },
+    {
+      "image": "img/gallery/events/A7403203.jpeg",
+      "alt": "Corporate event with team members networking",
+      "caption": "Business Conference"
+    },
+    {
+      "image": "img/gallery/events/A7403217.jpeg",
+      "alt": "Wedding reception dance floor moments",
+      "caption": "Wedding Reception - Party"
+    },
+    {
+      "image": "img/gallery/events/A7403220.jpeg",
+      "alt": "Graduation party with family and friends",
+      "caption": "High School Graduation"
+    }
+  ]
+}

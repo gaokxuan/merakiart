@@ -1,0 +1,26 @@
+[
+  {
+    "course": "Web Development Fundamentals",
+    "institution": "Self-Directed Learning",
+    "dates": "2024 - Present",
+    "summary": "Comprehensive study of modern web development technologies and best practices."
+  },
+  {
+    "course": "HTML & CSS Mastery",
+    "institution": "Online Learning Platform",
+    "dates": "2024",
+    "summary": "Deep dive into semantic HTML and modern CSS including Flexbox, Grid, and responsive design."
+  },
+  {
+    "course": "JavaScript Programming",
+    "institution": "Interactive Coding Platform",
+    "dates": "2024 - Present",
+    "summary": "Learning JavaScript fundamentals, DOM manipulation, and modern ES6+ features."
+  },
+  {
+    "course": "Hugo Static Site Generator",
+    "institution": "Documentation & Tutorials",
+    "dates": "2024",
+    "summary": "Mastering Hugo for building fast, modern static websites with dynamic content management."
+  }
+]

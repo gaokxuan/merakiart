@@ -1,0 +1,72 @@
+<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+  <div class="my-auto">
+    <div class="row align-items-center">
+      <!-- Text Content - 60% width -->
+      <div class="col-lg-7 col-md-6">
+        <h1 class="mb-0 photographer-name">
+          {{ .Site.Title }}
+        </h1>
+        <div class="tagline mb-4">
+          {{ .Site.Params.photography.tagline }}
+        </div>
+        <div class="subheading mb-5">
+          {{ .Site.Params.address }} ·
+          <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        </div>
+
+        <!-- Bio Content -->
+        <div class="photographer-bio mb-5">
+          {{ .Content }}
+        </div>
+
+        <!-- Specialties -->
+        {{ if .Site.Params.photography.specialties }}
+        <div class="mb-4">
+          <h3 class="mb-3">Photography Specialties</h3>
+          <ul class="fa-ul mb-0">
+            {{ range .Site.Params.photography.specialties }}
+            <li>
+              <i class="fa-li fa fa-camera text-primary"></i>
+              {{ . }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+
+        <!-- Experience & Location -->
+        <div class="mb-4">
+          <p class="mb-2"><strong>Experience:</strong> {{ .Site.Params.photography.yearsExperience }} years</p>
+          <p class="mb-0"><strong>Service Area:</strong> {{ .Site.Params.photography.location }}</p>
+        </div>
+
+        <!-- Social Media Links -->
+        {{ if .Site.Params.handles }}
+        <div class="social-icons">
+          <h4 class="mb-3">Follow My Work</h4>
+          {{ range .Site.Params.handles }}
+          <a href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+            <i class="fab fa-{{ .icon }}"></i>
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- Call to Action -->
+        <div class="mt-5">
+          <a href="/contact/" class="btn btn-primary btn-lg">Book Your Session</a>
+          <a href="/services/" class="btn btn-outline-primary btn-lg ml-3">View Services</a>
+        </div>
+      </div>
+
+      <!-- Profile Image - 40% width -->
+      <div class="col-lg-5 col-md-6 text-center">
+        <div class="photographer-image-container">
+          <img class="img-fluid photographer-portrait" src="{{ .Site.Params.profileImage | relURL }}" alt="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }} - Professional Photographer">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

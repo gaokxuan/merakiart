@@ -1,0 +1,72 @@
+[
+  {
+    "grouping": "Frontend Development",
+    "skills": [
+      {
+        "name": "HTML5",
+        "level": "70",
+        "keywords": ["Semantic HTML", "Accessibility", "Forms", "Canvas"]
+      },
+      {
+        "name": "CSS3",
+        "level": "65",
+        "keywords": ["Flexbox", "Grid", "Animations", "Responsive Design"]
+      },
+      {
+        "name": "JavaScript",
+        "level": "50",
+        "keywords": ["ES6+", "DOM Manipulation", "Event Handling", "Async/Await"]
+      },
+      {
+        "name": "Bootstrap",
+        "level": "60",
+        "keywords": ["Grid System", "Components", "Responsive Utilities"]
+      }
+    ]
+  },
+  {
+    "grouping": "Tools & Technologies",
+    "skills": [
+      {
+        "name": "Hugo",
+        "level": "55",
+        "keywords": ["Static Sites", "Templates", "Content Management"]
+      },
+      {
+        "name": "Git",
+        "level": "45",
+        "keywords": ["Version Control", "GitHub", "Collaboration"]
+      },
+      {
+        "name": "VS Code",
+        "level": "70",
+        "keywords": ["Extensions", "Debugging", "Integrated Terminal"]
+      },
+      {
+        "name": "Web Design",
+        "level": "60",
+        "keywords": ["UI/UX", "Color Theory", "Typography", "Layout"]
+      }
+    ]
+  },
+  {
+    "grouping": "Learning Goals",
+    "skills": [
+      {
+        "name": "React",
+        "level": "20",
+        "keywords": ["Components", "JSX", "State Management", "Hooks"]
+      },
+      {
+        "name": "Node.js",
+        "level": "15",
+        "keywords": ["Backend Development", "APIs", "Express.js"]
+      },
+      {
+        "name": "TypeScript",
+        "level": "10",
+        "keywords": ["Type Safety", "Modern JavaScript", "Tooling"]
+      }
+    ]
+  }
+]

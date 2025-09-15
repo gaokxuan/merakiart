@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Basic Package",
+    "price": "Starting at $299",
+    "duration": "1 Hour Session",
+    "image": "img/pricing/basic-package.jpg",
+    "popular": false,
+    "features": [
+      "1 hour photography session",
+      "1 location of your choice",
+      "30 professionally edited high-resolution images",
+      "Online gallery for viewing and downloading",
+      "Print release for personal use",
+      "Basic retouching included",
+      "Email delivery within 1 week"
+    ],
+    "ideal_for": "Individual headshots, couple portraits, small family sessions",
+    "cta_text": "Book Basic Package",
+    "cta_link": "/contact/?package=basic"
+  },
+  {
+    "name": "Premium Package",
+    "price": "Starting at $599",
+    "duration": "2-3 Hour Session",
+    "image": "img/pricing/premium-package.jpg",
+    "popular": true,
+    "features": [
+      "2-3 hour photography session",
+      "Up to 2 locations or outfit changes",
+      "75 professionally edited high-resolution images",
+      "Online gallery with sharing capabilities",
+      "Print release for personal and professional use",
+      "Advanced retouching and color correction",
+      "Pre-session consultation and styling advice",
+      "USB drive with all images included",
+      "Email delivery within 5 business days"
+    ],
+    "ideal_for": "Engagement sessions, family portraits, senior photos, small events",
+    "cta_text": "Book Premium Package",
+    "cta_link": "/contact/?package=premium"
+  },
+  {
+    "name": "Exclusive Package",
+    "price": "Starting at $1,299",
+    "duration": "Full Day Coverage",
+    "image": "img/pricing/exclusive-package.jpg",
+    "popular": false,
+    "features": [
+      "6-8 hour photography coverage",
+      "Multiple locations and unlimited outfit changes",
+      "200+ professionally edited high-resolution images",
+      "Premium online gallery with client favorites",
+      "Full commercial print release",
+      "Professional retouching and artistic editing",
+      "Comprehensive pre-event planning consultation",
+      "Second photographer for large events",
+      "Custom USB drive in elegant packaging",
+      "Rush delivery available (24-48 hours)",
+      "Complimentary engagement or portrait session",
+      "Professional prints credit ($200 value)"
+    ],
+    "ideal_for": "Weddings, large events, corporate photography, destination sessions",
+    "cta_text": "Book Exclusive Package",
+    "cta_link": "/contact/?package=exclusive"
+  }
+]

@@ -1,0 +1,19 @@
+<!-- Custom CSS for Photography Portfolio -->
+<link rel="stylesheet" href="{{ "css/photography.css" | relURL }}">
+
+<!-- Photography-specific meta tags -->
+<meta name="description" content="Professional photography services including couples, portrait, and events photography by {{ .Site.Params.firstName }} {{ .Site.Params.lastName }}">
+<meta name="keywords" content="photography, photographer, couples photography, portrait photography, events photography, wedding photography">
+
+<!-- Open Graph tags for social media -->
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:description" content="{{ .Site.Params.photography.tagline }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ .Site.Params.profileImage | absURL }}">
+
+<!-- Twitter Card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta name="twitter:description" content="{{ .Site.Params.photography.tagline }}">
+<meta name="twitter:image" content="{{ .Site.Params.profileImage | absURL }}">

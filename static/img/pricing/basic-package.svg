@@ -1,0 +1,13 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="basicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#BD5D38;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#824027;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="200" fill="url(#basicGrad)" rx="8"/>
+  <circle cx="150" cy="80" r="30" fill="rgba(255,255,255,0.3)"/>
+  <path d="M120 110 Q150 100 180 110 L180 140 Q150 150 120 140 Z" fill="rgba(255,255,255,0.2)"/>
+  <text x="150" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Basic Package</text>
+  <text x="150" y="185" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="rgba(255,255,255,0.8)">Starting at $299</text>
+</svg>

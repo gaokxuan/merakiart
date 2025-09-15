@@ -1,0 +1,334 @@
+{{ define "main" }}
+<div class="container-fluid p-0">
+  <!-- Main Contact Section - First Screen -->
+  <section class="contact-main-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <!-- Contact Header -->
+        <div class="col-12 mb-4">
+          <div class="text-center">
+            <h1 class="mb-3">Get In <span class="text-primary">Touch</span></h1>
+            <div class="script-heading mb-4">Let's Create Something Beautiful</div>
+          </div>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-lg-4 mb-4">
+          <div class="contact-info-card">
+            <h4 class="mb-4">Contact Information</h4>
+
+            <div class="contact-item mb-3">
+              <h6><i class="fa fa-phone text-primary mr-2"></i>Phone</h6>
+              <a href="tel:{{ .Site.Params.phone }}" class="contact-link">{{ .Site.Params.phone }}</a>
+            </div>
+
+            <div class="contact-item mb-3">
+              <h6><i class="fa fa-envelope text-primary mr-2"></i>Email</h6>
+              <a href="mailto:{{ .Site.Params.email }}" class="contact-link">{{ .Site.Params.email }}</a>
+            </div>
+
+            <div class="contact-item mb-3">
+              <h6><i class="fa fa-clock text-primary mr-2"></i>Business Hours</h6>
+              <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+              <p class="mb-1">Saturday: 10:00 AM - 4:00 PM</p>
+              <p class="mb-0">Sunday: By appointment only</p>
+            </div>
+
+            <div class="contact-item mb-4">
+              <h6><i class="fa fa-map-marker-alt text-primary mr-2"></i>Service Area</h6>
+              <p class="mb-0">{{ .Site.Params.photography.location }}</p>
+              <small class="text-muted">Destination photography available</small>
+            </div>
+
+            <!-- Social Media -->
+            {{ if .Site.Params.handles }}
+            <div class="contact-item">
+              <h6 class="mb-3">Follow My Work</h6>
+              <div class="social-icons">
+                {{ range .Site.Params.handles }}
+                <a href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }}" class="mr-3">
+                  <i class="fab fa-{{ .icon }}"></i>
+                </a>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-form-card">
+            <h4 class="mb-4">Send Me a Message</h4>
+
+            <form id="contactForm" action="#" method="POST">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name" class="form-label">Name *</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="service" class="form-label">Service Type</label>
+                  <select class="form-control" id="service" name="service">
+                    <option value="">Select a service...</option>
+                    <option value="couples">Couples Photography</option>
+                    <option value="portraits">Portrait Photography</option>
+                    <option value="events">Events Photography</option>
+                    <option value="custom">Custom Package</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="eventDate" class="form-label">Preferred Session Date</label>
+                  <input type="date" class="form-control" id="eventDate" name="eventDate">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="budget" class="form-label">Budget Range</label>
+                  <select class="form-control" id="budget" name="budget">
+                    <option value="">Select budget range...</option>
+                    <option value="under-500">Under $500</option>
+                    <option value="500-1000">$500 - $1,000</option>
+                    <option value="1000-2000">$1,000 - $2,000</option>
+                    <option value="2000-plus">$2,000+</option>
+                    <option value="discuss">Let's discuss</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Message / Details *</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required
+                  placeholder="Tell me about your vision, location preferences, number of people, and any special requests..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Second Screen -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+
+          <div class="faq-item mb-4">
+            <h5 class="faq-question">How far in advance should I book?</h5>
+            <p class="faq-answer">For best availability, book 4-6 weeks in advance. Wedding and event photography should be booked 3-6 months ahead.</p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h5 class="faq-question">What happens if it rains during our outdoor session?</h5>
+            <p class="faq-answer">We'll monitor weather closely and reschedule if necessary. Indoor backup locations are always available.</p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h5 class="faq-question">How long until I receive my photos?</h5>
+            <p class="faq-answer">Standard delivery is 1-2 weeks. Rush delivery available for additional fee.</p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h5 class="faq-question">Can I request specific editing styles?</h5>
+            <p class="faq-answer">Absolutely! We'll discuss your preferences during consultation and can provide samples.</p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h5 class="faq-question">Do you offer payment plans?</h5>
+            <p class="faq-answer">Yes, we offer flexible payment options. 50% deposit required to secure your date, with the balance due before or on the day of your session.</p>
+          </div>
+
+          <div class="faq-item mb-4">
+            <h5 class="faq-question">What should I wear for my session?</h5>
+            <p class="faq-answer">We provide a comprehensive styling guide with outfit suggestions, color palettes, and tips to help you look your best.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+/* Contact Page Styles */
+.contact-main-section {
+  background: #fafafa;
+  padding: 2rem 0;
+}
+
+.contact-info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.contact-form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.contact-item {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 1rem;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  color: #BD5D38;
+  text-decoration: none;
+}
+
+.script-heading {
+  font-family: 'Meraki Script', cursive;
+  font-size: 1.5rem;
+  color: #BD5D38;
+  margin-bottom: 2rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: white;
+  padding: 4rem 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  color: #BD5D38;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Form Styles */
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #BD5D38;
+  box-shadow: 0 0 0 0.2rem rgba(189, 93, 56, 0.25);
+}
+
+.btn-primary {
+  background-color: #BD5D38;
+  border-color: #BD5D38;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #824027;
+  border-color: #824027;
+  transform: translateY(-2px);
+}
+
+.text-primary {
+  color: #BD5D38 !important;
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 1.5rem;
+  color: #BD5D38;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #824027;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contact-main-section {
+    padding: 1rem 0;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .script-heading {
+    font-size: 1.2rem;
+  }
+
+  .faq-section {
+    padding: 3rem 0;
+  }
+}
+</style>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get form data
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData);
+  
+  // Simple validation
+  if (!data.name || !data.email || !data.message) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  
+  // Here you would typically send the data to your server
+  // For now, we'll just show a success message
+  alert('Thank you for your message! I\'ll get back to you within 24 hours.');
+  
+  // Reset form
+  this.reset();
+});
+</script>
+{{ end }}

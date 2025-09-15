@@ -1,0 +1,29 @@
+[
+  {
+    "role": "Aspiring Web Developer",
+    "company": "Self-Directed Learning",
+    "summary": "Embarking on a comprehensive journey to master web development technologies and best practices.",
+    "range": "2024 - Present",
+    "url": "https://merakiart.dev",
+    "highlights": [
+      "Learning HTML5, CSS3, and JavaScript fundamentals",
+      "Building responsive websites using modern CSS techniques",
+      "Exploring static site generators like Hugo",
+      "Practicing version control with Git and GitHub",
+      "Studying web accessibility and performance optimization"
+    ]
+  },
+  {
+    "role": "Web Development Student",
+    "company": "Online Learning Platforms",
+    "summary": "Actively pursuing web development education through various online resources and practical projects.",
+    "range": "2024",
+    "highlights": [
+      "Completed HTML and CSS fundamentals courses",
+      "Built first responsive website using CSS Grid and Flexbox",
+      "Learning JavaScript programming concepts",
+      "Exploring modern development tools and workflows",
+      "Creating portfolio projects to demonstrate skills"
+    ]
+  }
+]
