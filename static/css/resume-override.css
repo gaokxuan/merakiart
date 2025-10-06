@@ -1,0 +1,35 @@
+/* Resume theme overrides for photography site */
+
+/* Ensure proper logo sizing */
+.logo-inline {
+  height: 3.5rem !important;
+  width: 3.5rem !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 767px) {
+  .logo-inline {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+  }
+}
+
+/* Fix sidebar profile image sizing */
+#sideNav .navbar-brand .img-profile {
+  max-width: 10rem !important;
+  max-height: 10rem !important;
+  width: 10rem !important;
+  height: 10rem !important;
+}
+
+/* Ensure photographer portrait doesn't get too big */
+.photographer-portrait {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fix any oversized images */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
