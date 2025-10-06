@@ -7,10 +7,40 @@
   <section class="dynamic-gallery-section">
     <div class="container">
       {{ $galleryData := index .Site.Data "gallery-dynamic" }}
+      {{ $galleryOrder := index .Site.Data "gallery-order" }}
       {{ if $galleryData.categories }}
         <!-- Gallery Grid Container -->
         <div class="gallery-grid-container">
-        {{ range $categoryIndex, $category := $galleryData.categories }}
+        {{ $orderedCategories := slice }}
+
+        <!-- Build ordered categories list based on gallery-order.json -->
+        {{ if $galleryOrder.order }}
+          {{ range $orderName := $galleryOrder.order }}
+            {{ range $category := $galleryData.categories }}
+              {{ if eq $category.name $orderName }}
+                {{ $orderedCategories = $orderedCategories | append $category }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          <!-- Add any categories not in the order list at the end -->
+          {{ range $category := $galleryData.categories }}
+            {{ $found := false }}
+            {{ range $orderName := $galleryOrder.order }}
+              {{ if eq $category.name $orderName }}
+                {{ $found = true }}
+              {{ end }}
+            {{ end }}
+            {{ if not $found }}
+              {{ $orderedCategories = $orderedCategories | append $category }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          <!-- Fallback to original order if no order config -->
+          {{ $orderedCategories = $galleryData.categories }}
+        {{ end }}
+
+        {{ range $categoryIndex, $category := $orderedCategories }}
           <!-- Category Card -->
           <div class="gallery-category-card" id="{{ $category.slug }}">
             <h2 class="gallery-category-title">{{ $category.name }}</h2>
