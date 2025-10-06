@@ -4,6 +4,7 @@
       "name": "Anila & Tom",
       "slug": "anila-tom",
       "images": [
+        {"src": "img/shots/Anila & Tom/cover.png", "alt": "Anila & Tom - cover.png"},
         {"src": "img/shots/Anila & Tom/A7407505-Edit-Edit.jpg", "alt": "Anila & Tom - A7407505-Edit-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407583-Edit.jpg", "alt": "Anila & Tom - A7407583-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407596-Edit-Edit.jpg", "alt": "Anila & Tom - A7407596-Edit-Edit.jpg"},
@@ -15,7 +16,6 @@
         {"src": "img/shots/Anila & Tom/A7407856-Edit.jpg", "alt": "Anila & Tom - A7407856-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407878-Edit.jpg", "alt": "Anila & Tom - A7407878-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407896-Edit.jpg", "alt": "Anila & Tom - A7407896-Edit.jpg"},
-        {"src": "img/shots/Anila & Tom/cover.jpg", "alt": "Anila & Tom - cover.jpg"},
         {"src": "img/shots/Anila & Tom/Aesthetic Fashion Photography Brand Photo Collage Instagram Post.png", "alt": "Anila & Tom - Aesthetic Fashion Photography Brand Photo Collage Instagram Post.png"},
         {"src": "img/shots/Anila & Tom/Beige Refined Elegant Photo Collage Moodboard Instagram Post.png", "alt": "Anila & Tom - Beige Refined Elegant Photo Collage Moodboard Instagram Post.png"},
         {"src": "img/shots/Anila & Tom/Modern Aesthetic Wedding Photo Collage Instagram Post.png", "alt": "Anila & Tom - Modern Aesthetic Wedding Photo Collage Instagram Post.png"},
@@ -93,6 +93,7 @@
       "name": "Leonardo & Beatriz",
       "slug": "leonardo-beatriz",
       "images": [
+        {"src": "img/shots/Leonardo & Beatriz/cover.jpg", "alt": "Leonardo & Beatriz - cover.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/2.jpg", "alt": "Leonardo & Beatriz - 2.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/4.jpg", "alt": "Leonardo & Beatriz - 4.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/5-1.jpg", "alt": "Leonardo & Beatriz - 5-1.jpg"},
@@ -100,7 +101,6 @@
         {"src": "img/shots/Leonardo & Beatriz/A7400532-Edit.jpg", "alt": "Leonardo & Beatriz - A7400532-Edit.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/A7400695.jpg", "alt": "Leonardo & Beatriz - A7400695.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/A7400729-Edit.jpg", "alt": "Leonardo & Beatriz - A7400729-Edit.jpg"},
-        {"src": "img/shots/Leonardo & Beatriz/cover.jpg", "alt": "Leonardo & Beatriz - cover.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/1.png", "alt": "Leonardo & Beatriz - 1.png"},
         {"src": "img/shots/Leonardo & Beatriz/3.png", "alt": "Leonardo & Beatriz - 3.png"},
         {"src": "img/shots/Leonardo & Beatriz/5-2.png", "alt": "Leonardo & Beatriz - 5-2.png"},
