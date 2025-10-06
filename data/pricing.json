@@ -1,66 +1,55 @@
 [
   {
     "name": "Basic Package",
-    "price": "Starting at $299",
-    "duration": "1 Hour Session",
+    "subtitle": "Essential Coverage",
+    "price": "$600",
+    "duration": "2 hours",
     "image": "img/pricing/basic-package.jpg",
     "popular": false,
     "features": [
-      "1 hour photography session",
-      "1 location of your choice",
-      "30 professionally edited high-resolution images",
-      "Online gallery for viewing and downloading",
-      "Print release for personal use",
-      "Basic retouching included",
-      "Email delivery within 1 week"
+      "1 Location",
+      "50 professionally edited photos",
+      "Full access to all additional images captured"
     ],
-    "ideal_for": "Individual headshots, couple portraits, small family sessions",
+    "description": "This package is ideal if you're looking for simple, beautiful coverage without the full-day commitment. You'll receive a curated set of edited images along with every moment we capture, ensuring your story is preserved with both quality and completeness.",
+    "ideal_for": "Perfect for intimate ceremonies, portraits, or a focused portion of your day",
     "cta_text": "Book Basic Package",
-    "cta_link": "/contact/?package=basic"
+    "cta_link": "contact/?package=basic"
   },
   {
     "name": "Premium Package",
-    "price": "Starting at $599",
-    "duration": "2-3 Hour Session",
+    "subtitle": "Tailored to Your Needs",
+    "price": "$300/hour",
+    "duration": "Flexible coverage",
     "image": "img/pricing/premium-package.jpg",
     "popular": true,
     "features": [
-      "2-3 hour photography session",
-      "Up to 2 locations or outfit changes",
-      "75 professionally edited high-resolution images",
-      "Online gallery with sharing capabilities",
-      "Print release for personal and professional use",
-      "Advanced retouching and color correction",
-      "Pre-session consultation and styling advice",
-      "USB drive with all images included",
-      "Email delivery within 5 business days"
+      "1 Professional Photographer",
+      "Hours and locations fully customizable",
+      "Full access to all photos captured",
+      "~30 edited photos per hour"
     ],
-    "ideal_for": "Engagement sessions, family portraits, senior photos, small events",
+    "description": "4 hours minimum. This package is designed to give you the freedom to shape the photography coverage exactly as you envision it. Whether it's a short ceremony, a full-day celebration, or multiple locations, you'll receive comprehensive documentation and beautifully edited memories that match the time we spend together.",
+    "ideal_for": "Flexible coverage based on your wedding day needs.",
     "cta_text": "Book Premium Package",
-    "cta_link": "/contact/?package=premium"
+    "cta_link": "contact/?package=premium"
   },
   {
     "name": "Exclusive Package",
-    "price": "Starting at $1,299",
-    "duration": "Full Day Coverage",
+    "subtitle": "Highlight Video",
+    "price": "$1,000",
+    "duration": "3 hours of video coverage",
     "image": "img/pricing/exclusive-package.jpg",
     "popular": false,
     "features": [
-      "6-8 hour photography coverage",
-      "Multiple locations and unlimited outfit changes",
-      "200+ professionally edited high-resolution images",
-      "Premium online gallery with client favorites",
-      "Full commercial print release",
-      "Professional retouching and artistic editing",
-      "Comprehensive pre-event planning consultation",
-      "Second photographer for large events",
-      "Custom USB drive in elegant packaging",
-      "Rush delivery available (24-48 hours)",
-      "Complimentary engagement or portrait session",
-      "Professional prints credit ($200 value)"
+      "1-minute highlight video",
+      "Captures ceremony and key moments",
+      "Can be booked on its own",
+      "Or add to Premium Package for +$1,000"
     ],
-    "ideal_for": "Weddings, large events, corporate photography, destination sessions",
+    "description": "This package is designed for those who want more than photos alone. Along with the full flexibility of Premium coverage, you'll also receive a beautifully crafted short video that highlights the emotions and atmosphere of your celebration—an unforgettable keepsake to watch and share for years to come.",
+    "ideal_for": "Perfect for couples who want a cinematic memory to relive and share",
     "cta_text": "Book Exclusive Package",
-    "cta_link": "/contact/?package=exclusive"
+    "cta_link": "contact/?package=exclusive"
   }
 ]

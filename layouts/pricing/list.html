@@ -15,23 +15,36 @@
             </div>
             {{ end }}
 
-            <div class="card-body text-center p-3">
-              <h4 class="card-title mb-2">{{ .name }}</h4>
-              <h3 class="text-primary mb-2">{{ .price }}</h3>
-              <p class="text-muted small mb-3">{{ .duration }}</p>
+            <div class="card-body p-4">
+              <h4 class="card-title mb-1 text-center">{{ .name }}</h4>
+              {{ if .subtitle }}
+              <p class="text-muted small text-center mb-3">{{ .subtitle }}</p>
+              {{ end }}
+              <h3 class="text-primary mb-2 text-center">{{ .price }}</h3>
+              <p class="text-muted small mb-3 text-center">{{ .duration }}</p>
 
-              <!-- Key Features (limited) -->
+              <!-- Key Features -->
               <ul class="list-unstyled mb-3 small">
-                {{ range first 3 .features }}
-                <li class="mb-1">
-                  <i class="fa fa-check text-primary mr-1"></i>
+                {{ range .features }}
+                <li class="mb-2">
+                  <i class="fa fa-check text-primary mr-2"></i>
                   {{ . }}
                 </li>
                 {{ end }}
               </ul>
 
+              <!-- Description -->
+              {{ if .description }}
+              <p class="small text-muted mb-3" style="line-height: 1.6;">{{ .description }}</p>
+              {{ end }}
+
+              <!-- Ideal For -->
+              {{ if .ideal_for }}
+              <p class="small mb-3"><strong>{{ .ideal_for }}</strong></p>
+              {{ end }}
+
               <!-- Call to Action -->
-              <a href="{{ .cta_link }}" class="btn {{ if .popular }}btn-primary{{ else }}btn-outline-primary{{ end }} btn-sm">
+              <a href="{{ .cta_link | relLangURL }}" class="btn {{ if .popular }}btn-primary{{ else }}btn-outline-primary{{ end }} btn-block">
                 {{ .cta_text }}
               </a>
             </div>
@@ -91,8 +104,20 @@
 
 .pricing-card-minimal {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: auto;
+  height: 100%;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card-minimal .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card-minimal .btn {
+  margin-top: auto;
 }
 
 .pricing-card-minimal:hover {
@@ -110,31 +135,31 @@
 }
 
 .btn-primary {
-  background-color: #BD5D38;
-  border-color: #BD5D38;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
-  background-color: #824027;
-  border-color: #824027;
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
 }
 
 .btn-outline-primary {
-  color: #BD5D38;
-  border-color: #BD5D38;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .btn-outline-primary:hover {
-  background-color: #BD5D38;
-  border-color: #BD5D38;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: var(--primary-color) !important;
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: var(--primary-color) !important;
 }
 
 /* Responsive adjustments */

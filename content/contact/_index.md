@@ -11,17 +11,11 @@ Ready to capture your special moments? I'd love to hear about your vision and he
 
 ## Get In Touch
 
-**Phone:** [1-206-530-9202](tel:1-206-530-9202)
 **Email:** [merakiartphoto@gmail.com](mailto:merakiartphoto@gmail.com)
 
-**Business Hours:**
-- Monday - Friday: 9:00 AM - 6:00 PM
-- Saturday: 10:00 AM - 4:00 PM  
-- Sunday: By appointment only
-
 **Service Area:**
-SF Bay Area & Surrounding Areas (up to 50 miles)
-*Destination photography available - travel fees may apply*
+**Home Market:** SF Bay Area & Surrounding Areas
+*Destination Photography Available with travel fees applied*
 
 ## Booking Process
 

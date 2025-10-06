@@ -1,0 +1,10 @@
+# Development Environment Configuration
+# Used when running: hugo server -D
+
+baseURL = "http://localhost:1313/merakiart/"
+
+# Development-specific settings
+[params]
+# Formspree redirect for local development
+formspreeRedirect = "http://localhost:1313/merakiart/contact/?success=true"
+

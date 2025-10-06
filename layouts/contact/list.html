@@ -17,8 +17,12 @@
             <h4 class="mb-4">Contact Information</h4>
 
             <div class="contact-item mb-3">
-              <h6><i class="fa fa-phone text-primary mr-2"></i>Phone</h6>
-              <a href="tel:{{ .Site.Params.phone }}" class="contact-link">{{ .Site.Params.phone }}</a>
+              <h6><i class="fab fa-whatsapp text-primary mr-2"></i>Contact Me</h6>
+              {{ $phone := replace .Site.Params.phone "-" "" }}
+              {{ $phone := replace $phone " " "" }}
+              <a href="https://wa.me/{{ $phone }}" target="_blank" rel="noopener" class="btn btn-success btn-block">
+                <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+              </a>
             </div>
 
             <div class="contact-item mb-3">
@@ -26,17 +30,10 @@
               <a href="mailto:{{ .Site.Params.email }}" class="contact-link">{{ .Site.Params.email }}</a>
             </div>
 
-            <div class="contact-item mb-3">
-              <h6><i class="fa fa-clock text-primary mr-2"></i>Business Hours</h6>
-              <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
-              <p class="mb-1">Saturday: 10:00 AM - 4:00 PM</p>
-              <p class="mb-0">Sunday: By appointment only</p>
-            </div>
-
             <div class="contact-item mb-4">
               <h6><i class="fa fa-map-marker-alt text-primary mr-2"></i>Service Area</h6>
-              <p class="mb-0">{{ .Site.Params.photography.location }}</p>
-              <small class="text-muted">Destination photography available</small>
+              <p class="mb-1"><strong>Home Market:</strong> SF Bay Area & Surrounding Areas</p>
+              <p class="mb-0"><small class="text-muted">Destination Photography Available with travel fees applied</small></p>
             </div>
 
             <!-- Social Media -->
@@ -81,9 +78,9 @@
                   <label for="service" class="form-label">Service Type</label>
                   <select class="form-control" id="service" name="service">
                     <option value="">Select a service...</option>
-                    <option value="couples">Couples Photography</option>
-                    <option value="portraits">Portrait Photography</option>
-                    <option value="events">Events Photography</option>
+                    <option value="basic">Basic Package – Essential Coverage</option>
+                    <option value="premium">Premium Package – Tailored to Your Needs</option>
+                    <option value="exclusive">Exclusive Package – Highlight Video</option>
                     <option value="custom">Custom Package</option>
                   </select>
                 </div>
@@ -203,14 +200,14 @@
 }
 
 .contact-link:hover {
-  color: #BD5D38;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 .script-heading {
   font-family: 'Meraki Script', cursive;
   font-size: 1.5rem;
-  color: #BD5D38;
+  color: var(--primary-color);
   margin-bottom: 2rem;
 }
 
@@ -230,7 +227,7 @@
 }
 
 .faq-question {
-  color: #BD5D38;
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -250,13 +247,13 @@
 }
 
 .form-control:focus {
-  border-color: #BD5D38;
-  box-shadow: 0 0 0 0.2rem rgba(189, 93, 56, 0.25);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(118, 140, 69, 0.25);
 }
 
 .btn-primary {
-  background-color: #BD5D38;
-  border-color: #BD5D38;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   padding: 0.75rem 2rem;
   border-radius: 8px;
   font-weight: 600;
@@ -264,24 +261,24 @@
 }
 
 .btn-primary:hover {
-  background-color: #824027;
-  border-color: #824027;
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
   transform: translateY(-2px);
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: var(--primary-color) !important;
 }
 
 /* Social Icons */
 .social-icons a {
   font-size: 1.5rem;
-  color: #BD5D38;
+  color: var(--primary-color);
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #824027;
+  color: var(--primary-hover);
   text-decoration: none;
 }
 
@@ -312,23 +309,43 @@
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  
+
   // Get form data
   const formData = new FormData(this);
   const data = Object.fromEntries(formData);
-  
+
   // Simple validation
   if (!data.name || !data.email || !data.message) {
     alert('Please fill in all required fields.');
     return;
   }
-  
+
   // Here you would typically send the data to your server
   // For now, we'll just show a success message
   alert('Thank you for your message! I\'ll get back to you within 24 hours.');
-  
+
   // Reset form
   this.reset();
+});
+
+// Pre-select service type from URL parameter
+window.addEventListener('load', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const packageParam = urlParams.get('package');
+
+  if (packageParam) {
+    const serviceSelect = document.getElementById('service');
+    if (serviceSelect) {
+      // Set the value to match the package parameter
+      serviceSelect.value = packageParam;
+
+      // Scroll to the contact form section
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
 });
 </script>
 {{ end }}

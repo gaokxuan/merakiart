@@ -9,8 +9,6 @@ outputs:
 - rss
 - json
 ---
-Hi there, my name is Shuhan, based in San Francisco, Bay area.
+Welcome to MerakiArt! I'm Shuhan, a Bay Area photographer passionate about capturing authentic moments and highlighting the unique beauty of every couple and event. With over 5 years of experience and a creative background in traditional art and film, I make every session relaxed and enjoyable so your true selves shine through each photo.
 
-With a mixed background in traditional art and film, I'm sensitive to color and light. I'm really grateful for the moment when I picked up my camera and immediately felt the freedom to show people how beautiful the way they are. My goal is always to create a comfortable shooting environment for every client as well as to record unforgettable memories at a reasonable price.
-
-You can find my photos below, let's start the journey together!
+Whether you're planning a wedding, engagement, or special event, I'm here to create memories you'll treasure at a price that respects your budget. Browse my galleries below—and let's tell your story together!

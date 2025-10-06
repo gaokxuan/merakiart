@@ -1,0 +1,14 @@
+# Production Environment Configuration
+# Used when running: hugo --environment production
+
+baseURL = "https://gaokxuan.github.io/merakiart/"
+
+# Production-specific settings
+[params]
+# Formspree redirect for production
+formspreeRedirect = "https://gaokxuan.github.io/merakiart/contact/?success=true"
+
+# Enable Google Analytics in production (if you add it later)
+[params.google.analytics]
+# trackerID = "G-XXXXXXXXXX"  # Uncomment and add your tracking ID when ready
+

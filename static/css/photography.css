@@ -1,12 +1,16 @@
 /* Photography Portfolio Custom Styles */
 
-/* Enhanced color scheme for photography */
+/* ========================================
+   COLOR THEME OPTIONS
+   ======================================== */
+
+/* THEME OPTION 1: Sage Green & Cream (DEFAULT) */
 :root {
-  --primary-color: #BD5D38;
-  --primary-hover: #824027;
+  --primary-color: #768C45;
+  --primary-hover: #5d6e36;
+  --light-bg: #F2f1f0;
   --text-color: #868e96;
   --heading-color: #343a40;
-  --light-bg: #f8f9fa;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   /* Typography Variables */
@@ -14,6 +18,29 @@
   --body-font: 'Lato', sans-serif;
   --accent-font: 'Meraki Script', cursive;
 }
+
+/* THEME OPTION 2: Deep Forest Green & Soft Mint */
+/*
+:root {
+  --primary-color: #3a4d19;
+  --primary-hover: #2a3812;
+  --light-bg: #edf3e6;
+  --text-color: #868e96;
+  --heading-color: #343a40;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  --heading-font: 'Tenor Sans', sans-serif;
+  --body-font: 'Lato', sans-serif;
+  --accent-font: 'Meraki Script', cursive;
+}
+*/
+
+/* ========================================
+   TO CHANGE THEME:
+   1. Comment out the current active theme (wrap in /* */)
+   2. Uncomment your desired theme (remove /* */)
+   3. Save the file - Hugo will auto-rebuild
+   ======================================== */
 
 /* Typography System */
 body {
@@ -212,6 +239,20 @@ label {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-color);
+}
+
+/* Logo styling for title */
+.logo-inline {
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .logo-inline {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 /* Enhanced profile image for photographer */
@@ -852,4 +893,35 @@ html {
 
 .border-photography {
   border-color: var(--primary-color) !important;
+}
+
+/* WhatsApp Button Styling */
+.btn-success {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #1da851;
+  border-color: #1da851;
+  color: white;
+}
+
+.btn-success:focus,
+.btn-success:active {
+  background-color: #1da851;
+  border-color: #1da851;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(37, 211, 102, 0.25);
+}
+
+/* Responsive button layout */
+@media (max-width: 768px) {
+  .btn-lg.ml-3 {
+    margin-left: 0 !important;
+    margin-top: 0.75rem;
+    display: block;
+    width: 100%;
+  }
 }

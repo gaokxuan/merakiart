@@ -3,7 +3,8 @@
     <div class="row align-items-center">
       <!-- Text Content - 60% width -->
       <div class="col-lg-7 col-md-6">
-        <h1 class="mb-0 photographer-name">
+        <h1 class="mb-0 photographer-name d-flex align-items-center">
+          <img src="{{ "img/logo/logo3.png" | relURL }}" alt="{{ .Site.Title }} Logo" class="logo-inline rounded-circle mr-3">
           {{ .Site.Title }}
         </h1>
         <div class="tagline mb-4">
@@ -34,10 +35,11 @@
         </div>
         {{ end }}
 
-        <!-- Experience & Location -->
+        <!-- Service Area -->
         <div class="mb-4">
-          <p class="mb-2"><strong>Experience:</strong> {{ .Site.Params.photography.yearsExperience }} years</p>
-          <p class="mb-0"><strong>Service Area:</strong> {{ .Site.Params.photography.location }}</p>
+          <p class="mb-1"><strong>Service Area:</strong></p>
+          <p class="mb-1"><strong>Home Market:</strong> SF Bay Area & Surrounding Areas</p>
+          <p class="mb-0"><small class="text-muted">Destination Photography Available with travel fees applied</small></p>
         </div>
 
         <!-- Social Media Links -->
@@ -54,8 +56,8 @@
 
         <!-- Call to Action -->
         <div class="mt-5">
-          <a href="/contact/" class="btn btn-primary btn-lg">Book Your Session</a>
-          <a href="/services/" class="btn btn-outline-primary btn-lg ml-3">View Services</a>
+          <a href="{{ "contact" | relLangURL }}" class="btn btn-primary btn-lg">Book Your Session</a>
+          <a href="{{ "pricing" | relLangURL }}" class="btn btn-outline-primary btn-lg ml-3">View Services</a>
         </div>
       </div>
 

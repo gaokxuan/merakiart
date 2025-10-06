@@ -8,34 +8,36 @@
     <div class="container">
       {{ $galleryData := index .Site.Data "gallery-dynamic" }}
       {{ if $galleryData.categories }}
+        <!-- Gallery Grid Container -->
+        <div class="gallery-grid-container">
         {{ range $categoryIndex, $category := $galleryData.categories }}
-          <!-- Category Section -->
-          <div class="gallery-category-section" id="{{ $category.slug }}">
+          <!-- Category Card -->
+          <div class="gallery-category-card" id="{{ $category.slug }}">
             <h2 class="gallery-category-title">{{ $category.name }}</h2>
             <p class="gallery-category-count">{{ len $category.images }} Photos</p>
 
             <!-- Stacked Photo Preview -->
             <div class="stacked-preview-container">
               <div class="photo-stack">
-                {{ $coverImage := "" }}
+                {{ $coverImage := dict }}
+                {{ $hasCover := false }}
                 {{ $otherImages := slice }}
-                {{ $allImages := slice }}
 
                 <!-- Find cover image and organize images -->
                 {{ range $image := $category.images }}
-                  {{ if or (in (lower $image.src) "cover") (in (lower $image.src) "cover.jpg") (in (lower $image.src) "cover.png") }}
+                  {{ $lowerSrc := lower $image.src }}
+                  {{ if or (strings.HasSuffix $lowerSrc "/cover.jpg") (strings.HasSuffix $lowerSrc "/cover.png") (strings.HasSuffix $lowerSrc "/cover.jpeg") }}
                     {{ $coverImage = $image }}
+                    {{ $hasCover = true }}
                   {{ else }}
                     {{ $otherImages = $otherImages | append $image }}
                   {{ end }}
                 {{ end }}
 
                 <!-- Build final image list: cover first, then others -->
-                {{ if $coverImage }}
-                  {{ $allImages = slice $coverImage }}
-                  {{ $allImages = $allImages | append $otherImages }}
-                {{ else }}
-                  {{ $allImages = $category.images }}
+                {{ $allImages := $category.images }}
+                {{ if $hasCover }}
+                  {{ $allImages = slice $coverImage | append $otherImages }}
                 {{ end }}
 
                 <!-- Display stacked photos (max 5) -->
@@ -76,6 +78,7 @@
             </div>
           </div>
         {{ end }}
+        </div> <!-- End gallery-grid-container -->
       {{ else }}
         <div class="text-center py-5">
           <p>No gallery images found. Please run the gallery generation script.</p>
@@ -105,21 +108,36 @@ img {
 
 /* Dynamic Gallery Styles */
 .dynamic-gallery-section {
-  padding: 3rem 0;
+  padding: 4rem 0;
   background: #fafafa;
 }
 
-.gallery-category-section {
-  margin-bottom: 6rem;
+/* Gallery Grid Container */
+.gallery-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.gallery-category-section:last-child {
-  margin-bottom: 3rem;
+.gallery-category-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.gallery-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
 .gallery-category-title {
   font-family: 'Tenor Sans', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #333;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -129,8 +147,8 @@ img {
 .gallery-category-count {
   text-align: center;
   color: #666;
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
   font-style: italic;
 }
 
@@ -139,13 +157,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .photo-stack {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
 }
 
@@ -269,18 +288,31 @@ img {
   display: none;
 }
 
-/* Responsive Stacked Preview */
+/* Responsive Grid Layout */
 @media (max-width: 1200px) {
+  .gallery-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
   .photo-stack {
-    width: 450px;
-    height: 450px;
+    max-width: 350px;
+  }
+
+  .gallery-category-title {
+    font-size: 1.6rem;
   }
 }
 
 @media (max-width: 768px) {
+  .gallery-grid-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
   .photo-stack {
-    width: 350px;
-    height: 350px;
+    max-width: 400px;
   }
 
   .stack-item-1 {
@@ -304,22 +336,25 @@ img {
   }
 
   .gallery-category-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .gallery-category-card {
+    padding: 1.5rem;
   }
 
   .dynamic-gallery-section {
     padding: 2rem 0;
   }
-
-  .gallery-category-section {
-    margin-bottom: 4rem;
-  }
 }
 
 @media (max-width: 480px) {
+  .gallery-grid-container {
+    gap: 1.5rem;
+  }
+
   .photo-stack {
-    width: 280px;
-    height: 280px;
+    max-width: 300px;
   }
 
   .stack-item-1 {
@@ -343,7 +378,11 @@ img {
   }
 
   .gallery-category-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .gallery-category-card {
+    padding: 1.25rem;
   }
 
   .stack-overlay-content i {
@@ -351,7 +390,7 @@ img {
   }
 
   .stack-overlay-content span {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -364,7 +403,7 @@ img {
 
 .glightbox-clean .gslide-title {
   font-family: 'Tenor Sans', sans-serif;
-  color: #BD5D38;
+  color: var(--primary-color);
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }

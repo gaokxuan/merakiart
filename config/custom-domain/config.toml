@@ -1,0 +1,16 @@
+# Custom Domain Configuration (Future Use)
+# Used when running: hugo --environment custom-domain
+# Switch to this when you set up a custom domain
+
+# EXAMPLE: Replace with your actual custom domain when ready
+baseURL = "https://www.merakiart.com/"
+
+# Custom domain settings
+[params]
+# Formspree redirect for custom domain
+formspreeRedirect = "https://www.merakiart.com/contact/?success=true"
+
+# Enable Google Analytics
+[params.google.analytics]
+# trackerID = "G-XXXXXXXXXX"  # Add your tracking ID
+

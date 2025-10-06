@@ -9,13 +9,13 @@
         {"src": "img/shots/Anila & Tom/A7407596-Edit-Edit.jpg", "alt": "Anila & Tom - A7407596-Edit-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407640.jpg", "alt": "Anila & Tom - A7407640.jpg"},
         {"src": "img/shots/Anila & Tom/A7407697-Edit-Edit.jpg", "alt": "Anila & Tom - A7407697-Edit-Edit.jpg"},
-        {"src": "img/shots/Anila & Tom/A7407702-Edit-Edit.jpg", "alt": "Anila & Tom - A7407702-Edit-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407734-Edit.jpg", "alt": "Anila & Tom - A7407734-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407781-Edit.jpg", "alt": "Anila & Tom - A7407781-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407791.jpg", "alt": "Anila & Tom - A7407791.jpg"},
         {"src": "img/shots/Anila & Tom/A7407856-Edit.jpg", "alt": "Anila & Tom - A7407856-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407878-Edit.jpg", "alt": "Anila & Tom - A7407878-Edit.jpg"},
         {"src": "img/shots/Anila & Tom/A7407896-Edit.jpg", "alt": "Anila & Tom - A7407896-Edit.jpg"},
+        {"src": "img/shots/Anila & Tom/cover.jpg", "alt": "Anila & Tom - cover.jpg"},
         {"src": "img/shots/Anila & Tom/Aesthetic Fashion Photography Brand Photo Collage Instagram Post.png", "alt": "Anila & Tom - Aesthetic Fashion Photography Brand Photo Collage Instagram Post.png"},
         {"src": "img/shots/Anila & Tom/Beige Refined Elegant Photo Collage Moodboard Instagram Post.png", "alt": "Anila & Tom - Beige Refined Elegant Photo Collage Moodboard Instagram Post.png"},
         {"src": "img/shots/Anila & Tom/Modern Aesthetic Wedding Photo Collage Instagram Post.png", "alt": "Anila & Tom - Modern Aesthetic Wedding Photo Collage Instagram Post.png"},
@@ -32,10 +32,10 @@
         {"src": "img/shots/Eric & Lee/A7406787-Edit.jpg", "alt": "Eric & Lee - A7406787-Edit.jpg"},
         {"src": "img/shots/Eric & Lee/A7407210.jpg", "alt": "Eric & Lee - A7407210.jpg"},
         {"src": "img/shots/Eric & Lee/A7407217.jpg", "alt": "Eric & Lee - A7407217.jpg"},
-        {"src": "img/shots/Eric & Lee/A7407264-Edit-Edit.jpg", "alt": "Eric & Lee - A7407264-Edit-Edit.jpg"},
         {"src": "img/shots/Eric & Lee/A7407309-Edit.jpg", "alt": "Eric & Lee - A7407309-Edit.jpg"},
         {"src": "img/shots/Eric & Lee/A7407344-2.jpg", "alt": "Eric & Lee - A7407344-2.jpg"},
-        {"src": "img/shots/Eric & Lee/A7407360-Edit.jpg", "alt": "Eric & Lee - A7407360-Edit.jpg"}
+        {"src": "img/shots/Eric & Lee/A7407360-Edit.jpg", "alt": "Eric & Lee - A7407360-Edit.jpg"},
+        {"src": "img/shots/Eric & Lee/cover.jpg", "alt": "Eric & Lee - cover.jpg"}
       ]
     },
     {
@@ -46,28 +46,14 @@
         {"src": "img/shots/Irene & Chris/11.jpg", "alt": "Irene & Chris - 11.jpg"},
         {"src": "img/shots/Irene & Chris/13.jpg", "alt": "Irene & Chris - 13.jpg"},
         {"src": "img/shots/Irene & Chris/2.jpg", "alt": "Irene & Chris - 2.jpg"},
-        {"src": "img/shots/Irene & Chris/4.jpg", "alt": "Irene & Chris - 4.jpg"},
         {"src": "img/shots/Irene & Chris/5.jpg", "alt": "Irene & Chris - 5.jpg"},
         {"src": "img/shots/Irene & Chris/7.jpg", "alt": "Irene & Chris - 7.jpg"},
         {"src": "img/shots/Irene & Chris/8.jpg", "alt": "Irene & Chris - 8.jpg"},
         {"src": "img/shots/Irene & Chris/9.jpg", "alt": "Irene & Chris - 9.jpg"},
         {"src": "img/shots/Irene & Chris/A7406078.jpg", "alt": "Irene & Chris - A7406078.jpg"},
         {"src": "img/shots/Irene & Chris/A7406129.jpg", "alt": "Irene & Chris - A7406129.jpg"},
-        {"src": "img/shots/Irene & Chris/A7409857.jpg", "alt": "Irene & Chris - A7409857.jpg"}
-      ]
-    },
-    {
-      "name": "Jose & Kayla",
-      "slug": "jose-kayla",
-      "images": [
-        {"src": "img/shots/Jose & Kayla/A7406238.jpg", "alt": "Jose & Kayla - A7406238.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7406250-Edit.jpg", "alt": "Jose & Kayla - A7406250-Edit.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7407160-Edit.jpg", "alt": "Jose & Kayla - A7407160-Edit.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7407231-Edit.jpg", "alt": "Jose & Kayla - A7407231-Edit.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7407245-Edit.jpg", "alt": "Jose & Kayla - A7407245-Edit.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7407269-Edit.jpg", "alt": "Jose & Kayla - A7407269-Edit.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7407331-Edit.jpg", "alt": "Jose & Kayla - A7407331-Edit.jpg"},
-        {"src": "img/shots/Jose & Kayla/A7407347.jpg", "alt": "Jose & Kayla - A7407347.jpg"}
+        {"src": "img/shots/Irene & Chris/A7409857.jpg", "alt": "Irene & Chris - A7409857.jpg"},
+        {"src": "img/shots/Irene & Chris/cover.jpg", "alt": "Irene & Chris - cover.jpg"}
       ]
     },
     {
@@ -79,21 +65,26 @@
         {"src": "img/shots/Karin & Sean/19.jpg", "alt": "Karin & Sean - 19.jpg"},
         {"src": "img/shots/Karin & Sean/20.jpg", "alt": "Karin & Sean - 20.jpg"},
         {"src": "img/shots/Karin & Sean/21.jpg", "alt": "Karin & Sean - 21.jpg"},
-        {"src": "img/shots/Karin & Sean/24.jpg", "alt": "Karin & Sean - 24.jpg"},
         {"src": "img/shots/Karin & Sean/25.jpg", "alt": "Karin & Sean - 25.jpg"},
         {"src": "img/shots/Karin & Sean/A7407022.jpg", "alt": "Karin & Sean - A7407022.jpg"},
         {"src": "img/shots/Karin & Sean/A7407241-2.jpg", "alt": "Karin & Sean - A7407241-2.jpg"},
         {"src": "img/shots/Karin & Sean/A7407992.jpg", "alt": "Karin & Sean - A7407992.jpg"},
-        {"src": "img/shots/Karin & Sean/A7408133-Edit.jpg", "alt": "Karin & Sean - A7408133-Edit.jpg"}
+        {"src": "img/shots/Karin & Sean/A7408133-Edit.jpg", "alt": "Karin & Sean - A7408133-Edit.jpg"},
+        {"src": "img/shots/Karin & Sean/cover.jpg", "alt": "Karin & Sean - cover.jpg"}
       ]
     },
     {
       "name": "Kayla & Jose",
       "slug": "kayla-jose",
       "images": [
+        {"src": "img/shots/Kayla & Jose/A7406238.jpg", "alt": "Kayla & Jose - A7406238.jpg"},
+        {"src": "img/shots/Kayla & Jose/A7406250-Edit.jpg", "alt": "Kayla & Jose - A7406250-Edit.jpg"},
         {"src": "img/shots/Kayla & Jose/A7407231-Edit.jpg", "alt": "Kayla & Jose - A7407231-Edit.jpg"},
+        {"src": "img/shots/Kayla & Jose/A7407245-Edit.jpg", "alt": "Kayla & Jose - A7407245-Edit.jpg"},
         {"src": "img/shots/Kayla & Jose/A7407269-Edit.jpg", "alt": "Kayla & Jose - A7407269-Edit.jpg"},
         {"src": "img/shots/Kayla & Jose/A7407331-Edit.jpg", "alt": "Kayla & Jose - A7407331-Edit.jpg"},
+        {"src": "img/shots/Kayla & Jose/A7407347.jpg", "alt": "Kayla & Jose - A7407347.jpg"},
+        {"src": "img/shots/Kayla & Jose/cover.jpg", "alt": "Kayla & Jose - cover.jpg"},
         {"src": "img/shots/Kayla & Jose/Beige Grey Aesthetic Minimalist Photo Collage Frame Lifestyle Portrait Instagram Post.png", "alt": "Kayla & Jose - Beige Grey Aesthetic Minimalist Photo Collage Frame Lifestyle Portrait Instagram Post.png"},
         {"src": "img/shots/Kayla & Jose/Beige Refined Elegant Photo Collage Moodboard Instagram Post.png", "alt": "Kayla & Jose - Beige Refined Elegant Photo Collage Moodboard Instagram Post.png"}
       ]
@@ -109,7 +100,7 @@
         {"src": "img/shots/Leonardo & Beatriz/A7400532-Edit.jpg", "alt": "Leonardo & Beatriz - A7400532-Edit.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/A7400695.jpg", "alt": "Leonardo & Beatriz - A7400695.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/A7400729-Edit.jpg", "alt": "Leonardo & Beatriz - A7400729-Edit.jpg"},
-        {"src": "img/shots/Leonardo & Beatriz/A7401439-Edit.jpg", "alt": "Leonardo & Beatriz - A7401439-Edit.jpg"},
+        {"src": "img/shots/Leonardo & Beatriz/cover.jpg", "alt": "Leonardo & Beatriz - cover.jpg"},
         {"src": "img/shots/Leonardo & Beatriz/1.png", "alt": "Leonardo & Beatriz - 1.png"},
         {"src": "img/shots/Leonardo & Beatriz/3.png", "alt": "Leonardo & Beatriz - 3.png"},
         {"src": "img/shots/Leonardo & Beatriz/5-2.png", "alt": "Leonardo & Beatriz - 5-2.png"},
@@ -131,12 +122,12 @@
         {"src": "img/shots/Maggie & David/A7406847.jpg", "alt": "Maggie & David - A7406847.jpg"},
         {"src": "img/shots/Maggie & David/A7407035-Edit.jpg", "alt": "Maggie & David - A7407035-Edit.jpg"},
         {"src": "img/shots/Maggie & David/A7407130-Edit.jpg", "alt": "Maggie & David - A7407130-Edit.jpg"},
-        {"src": "img/shots/Maggie & David/A7407295.jpg", "alt": "Maggie & David - A7407295.jpg"},
         {"src": "img/shots/Maggie & David/A7407354-Edit.jpg", "alt": "Maggie & David - A7407354-Edit.jpg"},
         {"src": "img/shots/Maggie & David/A7407443-Edit.jpg", "alt": "Maggie & David - A7407443-Edit.jpg"},
         {"src": "img/shots/Maggie & David/A7407523-Edit.jpg", "alt": "Maggie & David - A7407523-Edit.jpg"},
         {"src": "img/shots/Maggie & David/A7407692-Edit.jpg", "alt": "Maggie & David - A7407692-Edit.jpg"},
-        {"src": "img/shots/Maggie & David/A7407712-Edit.jpg", "alt": "Maggie & David - A7407712-Edit.jpg"}
+        {"src": "img/shots/Maggie & David/A7407712-Edit.jpg", "alt": "Maggie & David - A7407712-Edit.jpg"},
+        {"src": "img/shots/Maggie & David/cover.jpg", "alt": "Maggie & David - cover.jpg"}
       ]
     },
     {
@@ -151,11 +142,11 @@
         {"src": "img/shots/Maternity/A7408211-Edit.jpg", "alt": "Maternity - A7408211-Edit.jpg"},
         {"src": "img/shots/Maternity/A7408614-Edit.jpg", "alt": "Maternity - A7408614-Edit.jpg"},
         {"src": "img/shots/Maternity/A7408631.jpg", "alt": "Maternity - A7408631.jpg"},
-        {"src": "img/shots/Maternity/A7408851.jpg", "alt": "Maternity - A7408851.jpg"},
         {"src": "img/shots/Maternity/A7409115.jpg", "alt": "Maternity - A7409115.jpg"},
         {"src": "img/shots/Maternity/A7409191.jpg", "alt": "Maternity - A7409191.jpg"},
         {"src": "img/shots/Maternity/A7409248.jpg", "alt": "Maternity - A7409248.jpg"},
-        {"src": "img/shots/Maternity/A7409343.jpg", "alt": "Maternity - A7409343.jpg"}
+        {"src": "img/shots/Maternity/A7409343.jpg", "alt": "Maternity - A7409343.jpg"},
+        {"src": "img/shots/Maternity/cover.jpg", "alt": "Maternity - cover.jpg"}
       ]
     },
     {
@@ -170,9 +161,9 @@
         {"src": "img/shots/Portrait/A7400511.jpg", "alt": "Portrait - A7400511.jpg"},
         {"src": "img/shots/Portrait/A7400559-Edit.jpg", "alt": "Portrait - A7400559-Edit.jpg"},
         {"src": "img/shots/Portrait/A7400579.jpg", "alt": "Portrait - A7400579.jpg"},
-        {"src": "img/shots/Portrait/A7402072-Edit-Edit-Edit.jpg", "alt": "Portrait - A7402072-Edit-Edit-Edit.jpg"},
         {"src": "img/shots/Portrait/A7402082-Edit.jpg", "alt": "Portrait - A7402082-Edit.jpg"},
-        {"src": "img/shots/Portrait/A7402237.jpg", "alt": "Portrait - A7402237.jpg"}
+        {"src": "img/shots/Portrait/A7402237.jpg", "alt": "Portrait - A7402237.jpg"},
+        {"src": "img/shots/Portrait/cover.jpg", "alt": "Portrait - cover.jpg"}
       ]
     },
     {
@@ -180,7 +171,6 @@
       "slug": "rayhana-yousaf",
       "images": [
         {"src": "img/shots/Rayhana & Yousaf/A7405339.jpg", "alt": "Rayhana & Yousaf - A7405339.jpg"},
-        {"src": "img/shots/Rayhana & Yousaf/A7405729.jpg", "alt": "Rayhana & Yousaf - A7405729.jpg"},
         {"src": "img/shots/Rayhana & Yousaf/A7405760.jpg", "alt": "Rayhana & Yousaf - A7405760.jpg"},
         {"src": "img/shots/Rayhana & Yousaf/A7405764.jpg", "alt": "Rayhana & Yousaf - A7405764.jpg"},
         {"src": "img/shots/Rayhana & Yousaf/A7405808.jpg", "alt": "Rayhana & Yousaf - A7405808.jpg"},
@@ -192,6 +182,7 @@
         {"src": "img/shots/Rayhana & Yousaf/A7406182.jpg", "alt": "Rayhana & Yousaf - A7406182.jpg"},
         {"src": "img/shots/Rayhana & Yousaf/A7406207.jpg", "alt": "Rayhana & Yousaf - A7406207.jpg"},
         {"src": "img/shots/Rayhana & Yousaf/A7406368.jpg", "alt": "Rayhana & Yousaf - A7406368.jpg"},
+        {"src": "img/shots/Rayhana & Yousaf/cover.jpg", "alt": "Rayhana & Yousaf - cover.jpg"},
         {"src": "img/shots/Rayhana & Yousaf/Black Minimalist Photo Frame Instagram Post.png", "alt": "Rayhana & Yousaf - Black Minimalist Photo Frame Instagram Post.png"},
         {"src": "img/shots/Rayhana & Yousaf/Clean Vintage Photo Collage Fall Fashion Instagram Post.png", "alt": "Rayhana & Yousaf - Clean Vintage Photo Collage Fall Fashion Instagram Post.png"},
         {"src": "img/shots/Rayhana & Yousaf/Gray Beige Minimalist Retro Polaroid Photo Paper Clip Woman Photo Instagram Reel Cover.png", "alt": "Rayhana & Yousaf - Gray Beige Minimalist Retro Polaroid Photo Paper Clip Woman Photo Instagram Reel Cover.png"}
@@ -207,10 +198,10 @@
         {"src": "img/shots/Sara & Honza/A7401589-Edit.jpg", "alt": "Sara & Honza - A7401589-Edit.jpg"},
         {"src": "img/shots/Sara & Honza/A7401615-Edit.jpg", "alt": "Sara & Honza - A7401615-Edit.jpg"},
         {"src": "img/shots/Sara & Honza/A7401662-Edit.jpg", "alt": "Sara & Honza - A7401662-Edit.jpg"},
-        {"src": "img/shots/Sara & Honza/A7401673-Edit.jpg", "alt": "Sara & Honza - A7401673-Edit.jpg"},
         {"src": "img/shots/Sara & Honza/A7401690-Edit.jpg", "alt": "Sara & Honza - A7401690-Edit.jpg"},
         {"src": "img/shots/Sara & Honza/A7401700-Edit.jpg", "alt": "Sara & Honza - A7401700-Edit.jpg"},
-        {"src": "img/shots/Sara & Honza/A7401916-Edit.jpg", "alt": "Sara & Honza - A7401916-Edit.jpg"}
+        {"src": "img/shots/Sara & Honza/A7401916-Edit.jpg", "alt": "Sara & Honza - A7401916-Edit.jpg"},
+        {"src": "img/shots/Sara & Honza/cover.jpg", "alt": "Sara & Honza - cover.jpg"}
       ]
     },
     {
@@ -222,13 +213,13 @@
         {"src": "img/shots/Sarah & Grant/A7408019.jpg", "alt": "Sarah & Grant - A7408019.jpg"},
         {"src": "img/shots/Sarah & Grant/A7408190.jpg", "alt": "Sarah & Grant - A7408190.jpg"},
         {"src": "img/shots/Sarah & Grant/A7408215.jpg", "alt": "Sarah & Grant - A7408215.jpg"},
-        {"src": "img/shots/Sarah & Grant/A7408287-Edit.jpg", "alt": "Sarah & Grant - A7408287-Edit.jpg"},
         {"src": "img/shots/Sarah & Grant/A7408714.jpg", "alt": "Sarah & Grant - A7408714.jpg"},
         {"src": "img/shots/Sarah & Grant/A7408769.jpg", "alt": "Sarah & Grant - A7408769.jpg"},
         {"src": "img/shots/Sarah & Grant/A7408781.jpg", "alt": "Sarah & Grant - A7408781.jpg"},
         {"src": "img/shots/Sarah & Grant/A7408786.jpg", "alt": "Sarah & Grant - A7408786.jpg"},
         {"src": "img/shots/Sarah & Grant/A7409389.jpg", "alt": "Sarah & Grant - A7409389.jpg"},
-        {"src": "img/shots/Sarah & Grant/A7409470.jpg", "alt": "Sarah & Grant - A7409470.jpg"}
+        {"src": "img/shots/Sarah & Grant/A7409470.jpg", "alt": "Sarah & Grant - A7409470.jpg"},
+        {"src": "img/shots/Sarah & Grant/cover.jpg", "alt": "Sarah & Grant - cover.jpg"}
       ]
     }
   ]

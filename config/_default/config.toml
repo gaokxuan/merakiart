@@ -1,5 +1,4 @@
 title = "MerakiART"
-baseURL = "https://gaokxuan.github.io/merakiart/"
 theme = "resume"
 languageCode = "en-us"
 PygmentsCodeFences = true
@@ -14,7 +13,7 @@ favicon = "/favicon.ico"
 firstName = "Shuhan"
 lastName = ""
 phone = "1-206-530-9202"
-profileImage = "img/photographer-portrait.jpeg"
+profileImage = "img/photographer-portrait.jpg"
 showQr = false
 showContact = true
 showBoards = false
@@ -37,23 +36,13 @@ trackerID = ""
 # Social media handles for photographer
 [[params.handles]]
     name = "Instagram"
-    link = "https://instagram.com/merakiart_photography"
+    link = "https://www.instagram.com/merakiart_photo/"
     icon = "instagram"
 
 [[params.handles]]
     name = "Pinterest"
-    link = "https://pinterest.com/merakiart_photography"
+    link = "https://www.pinterest.com/shxu24/"
     icon = "pinterest"
-
-[[params.handles]]
-    name = "RedNote"
-    link = "https://xiaohongshu.com/user/profile/merakiart"
-    icon = "book"
-
-[[params.handles]]
-    name = "Facebook"
-    link = "https://facebook.com/merakiart.photography"
-    icon = "facebook"
 
 [outputs]
 home = ["HTML", "JSON"]
@@ -79,3 +68,4 @@ tag = "tags"
     name = "Contact"
     url = "/contact/"
     weight = 40
+
