@@ -1,7 +1,7 @@
 # Production Environment Configuration
 # Used when running: hugo --environment production
 
-baseURL = "https://merakiartphoto.com/"
+baseURL = "https://merakiartphoto.com"
 
 # Production-specific settings
 [params]
