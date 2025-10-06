@@ -57,7 +57,7 @@ jobs:
           hugo \
             --environment production \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://merakiartphoto.com"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
