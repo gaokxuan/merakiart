@@ -1,6 +1,7 @@
 title = "MerakiART"
 theme = "resume"
 languageCode = "en-us"
+baseURL = "https://merakiartphoto.com/"
 PygmentsCodeFences = true
 PygmentsCodeFencesGuessSyntax = true
 PygmentsStyle = "monokai"
