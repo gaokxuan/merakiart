@@ -1,75 +1,477 @@
 {{ define "main" }}
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
 <div class="container-fluid p-0">
-  <!-- Minimal Services Section -->
-  <section class="services-minimal-section">
+  <!-- Dynamic Gallery Section -->
+  <section class="dynamic-gallery-section">
     <div class="container">
-      <!-- Minimal Tab Navigation -->
-      <div class="minimal-tabs-container">
-        <ul class="nav nav-tabs minimal-nav-tabs justify-content-center mb-4" id="servicesTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active minimal-tab-link" id="couples-tab" data-toggle="tab" href="#couples" role="tab">Couples</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link minimal-tab-link" id="portraits-tab" data-toggle="tab" href="#portraits" role="tab">Portraits</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link minimal-tab-link" id="events-tab" data-toggle="tab" href="#events" role="tab">Events</a>
-          </li>
-        </ul>
-      </div>
+      {{ $galleryData := index .Site.Data "gallery-dynamic" }}
+      {{ if $galleryData.categories }}
+        {{ range $categoryIndex, $category := $galleryData.categories }}
+          <!-- Category Section -->
+          <div class="gallery-category-section" id="{{ $category.slug }}">
+            <h2 class="gallery-category-title">{{ $category.name }}</h2>
+            <p class="gallery-category-count">{{ len $category.images }} Photos</p>
 
-      <!-- Minimal Tab Content -->
-      <div class="tab-content minimal-tab-content" id="servicesTabContent">
-        <!-- Couples Photography Tab -->
-        <div class="tab-pane fade show active" id="couples" role="tabpanel">
-          {{ $galleries := .Site.Data.galleries }}
-          {{ if $galleries.couples }}
-          <div class="minimal-gallery-optimized">
-            <div class="gallery-grid-12">
-              {{ range first 12 $galleries.couples }}
-              <div class="gallery-item-optimized">
-                <img src="{{ .image | relURL }}" alt="{{ .alt }}" class="img-fluid gallery-thumbnail">
+            <!-- Stacked Photo Preview -->
+            <div class="stacked-preview-container">
+              <div class="photo-stack">
+                {{ $coverImage := "" }}
+                {{ $otherImages := slice }}
+                {{ $allImages := slice }}
+
+                <!-- Find cover image and organize images -->
+                {{ range $image := $category.images }}
+                  {{ if or (in (lower $image.src) "cover") (in (lower $image.src) "cover.jpg") (in (lower $image.src) "cover.png") }}
+                    {{ $coverImage = $image }}
+                  {{ else }}
+                    {{ $otherImages = $otherImages | append $image }}
+                  {{ end }}
+                {{ end }}
+
+                <!-- Build final image list: cover first, then others -->
+                {{ if $coverImage }}
+                  {{ $allImages = slice $coverImage }}
+                  {{ $allImages = $allImages | append $otherImages }}
+                {{ else }}
+                  {{ $allImages = $category.images }}
+                {{ end }}
+
+                <!-- Display stacked photos (max 5) -->
+                {{ range $imageIndex, $image := first 5 $allImages }}
+                  <div class="stack-item stack-item-{{ $imageIndex }}" style="z-index: {{ sub 5 $imageIndex }};">
+                    <img src="{{ $image.src | relURL }}"
+                         alt="{{ $image.alt }}"
+                         class="stack-thumbnail no-select"
+                         draggable="false"
+                         oncontextmenu="return false;">
+                  </div>
+                {{ end }}
+
+                <!-- Clickable overlay to open lightbox -->
+                <a href="{{ (index $allImages 0).src | relURL }}"
+                   class="stack-overlay glightbox"
+                   data-gallery="gallery-{{ $category.slug }}"
+                   data-title="{{ $category.name }}"
+                   data-description="Photo 1 of {{ len $category.images }}">
+                  <div class="stack-overlay-content">
+                    <i class="fas fa-images"></i>
+                    <span>View Gallery</span>
+                  </div>
+                </a>
               </div>
-              {{ end }}
+
+              <!-- Hidden images for lightbox (all images in order) -->
+              <div class="hidden-lightbox-images">
+                {{ range $imageIndex, $image := after 1 $allImages }}
+                  <a href="{{ $image.src | relURL }}"
+                     class="glightbox"
+                     data-gallery="gallery-{{ $category.slug }}"
+                     data-title="{{ $category.name }}"
+                     data-description="Photo {{ add $imageIndex 2 }} of {{ len $category.images }}">
+                  </a>
+                {{ end }}
+              </div>
             </div>
           </div>
-          {{ end }}
+        {{ end }}
+      {{ else }}
+        <div class="text-center py-5">
+          <p>No gallery images found. Please run the gallery generation script.</p>
         </div>
-
-        <!-- Portrait Photography Tab -->
-        <div class="tab-pane fade" id="portraits" role="tabpanel">
-          {{ $galleries := .Site.Data.galleries }}
-          {{ if $galleries.portraits }}
-          <div class="minimal-gallery-optimized">
-            <div class="gallery-grid-12">
-              {{ range first 12 $galleries.portraits }}
-              <div class="gallery-item-optimized">
-                <img src="{{ .image | relURL }}" alt="{{ .alt }}" class="img-fluid gallery-thumbnail">
-              </div>
-              {{ end }}
-            </div>
-          </div>
-          {{ end }}
-        </div>
-
-        <!-- Events Photography Tab -->
-        <div class="tab-pane fade" id="events" role="tabpanel">
-          {{ $galleries := .Site.Data.galleries }}
-          {{ if $galleries.events }}
-          <div class="minimal-gallery-optimized">
-            <div class="gallery-grid-12">
-              {{ range first 12 $galleries.events }}
-              <div class="gallery-item-optimized">
-                <img src="{{ .image | relURL }}" alt="{{ .alt }}" class="img-fluid gallery-thumbnail">
-              </div>
-              {{ end }}
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
+      {{ end }}
     </div>
   </section>
 </div>
 
+<style>
+/* Image Protection - Disable Right Click and Dragging */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: auto;
+}
+
+img {
+  -webkit-touch-callout: none;
+}
+
+/* Dynamic Gallery Styles */
+.dynamic-gallery-section {
+  padding: 3rem 0;
+  background: #fafafa;
+}
+
+.gallery-category-section {
+  margin-bottom: 6rem;
+}
+
+.gallery-category-section:last-child {
+  margin-bottom: 3rem;
+}
+
+.gallery-category-title {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.gallery-category-count {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+/* Stacked Preview Container */
+.stacked-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.photo-stack {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.stack-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  background: white;
+  padding: 10px;
+}
+
+/* Stacking effect - each photo offset */
+.stack-item-0 {
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.stack-item-1 {
+  top: 15px;
+  left: 15px;
+  transform: rotate(2deg);
+}
+
+.stack-item-2 {
+  top: 30px;
+  left: 30px;
+  transform: rotate(-1deg);
+}
+
+.stack-item-3 {
+  top: 45px;
+  left: 45px;
+  transform: rotate(1.5deg);
+}
+
+.stack-item-4 {
+  top: 60px;
+  left: 60px;
+  transform: rotate(-0.5deg);
+}
+
+.stack-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Hover effect on stack */
+.photo-stack:hover .stack-item-0 {
+  transform: rotate(-2deg) translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.photo-stack:hover .stack-item-1 {
+  transform: rotate(3deg) translate(20px, 20px);
+}
+
+.photo-stack:hover .stack-item-2 {
+  transform: rotate(-2deg) translate(35px, 35px);
+}
+
+/* Stack Overlay */
+.stack-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(189, 93, 56, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.stack-overlay:hover {
+  background: rgba(189, 93, 56, 0.85);
+}
+
+.stack-overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.stack-overlay:hover .stack-overlay-content {
+  opacity: 1;
+}
+
+.stack-overlay-content i {
+  font-size: 3rem;
+  color: white;
+}
+
+.stack-overlay-content span {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Hidden lightbox images */
+.hidden-lightbox-images {
+  display: none;
+}
+
+/* Responsive Stacked Preview */
+@media (max-width: 1200px) {
+  .photo-stack {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .photo-stack {
+    width: 350px;
+    height: 350px;
+  }
+
+  .stack-item-1 {
+    top: 12px;
+    left: 12px;
+  }
+
+  .stack-item-2 {
+    top: 24px;
+    left: 24px;
+  }
+
+  .stack-item-3 {
+    top: 36px;
+    left: 36px;
+  }
+
+  .stack-item-4 {
+    top: 48px;
+    left: 48px;
+  }
+
+  .gallery-category-title {
+    font-size: 2rem;
+  }
+
+  .dynamic-gallery-section {
+    padding: 2rem 0;
+  }
+
+  .gallery-category-section {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-stack {
+    width: 280px;
+    height: 280px;
+  }
+
+  .stack-item-1 {
+    top: 10px;
+    left: 10px;
+  }
+
+  .stack-item-2 {
+    top: 20px;
+    left: 20px;
+  }
+
+  .stack-item-3 {
+    top: 30px;
+    left: 30px;
+  }
+
+  .stack-item-4 {
+    top: 40px;
+    left: 40px;
+  }
+
+  .gallery-category-title {
+    font-size: 1.5rem;
+  }
+
+  .stack-overlay-content i {
+    font-size: 2rem;
+  }
+
+  .stack-overlay-content span {
+    font-size: 1rem;
+  }
+}
+
+/* GLightbox Custom Styling */
+.gslide-description {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.glightbox-clean .gslide-title {
+  font-family: 'Tenor Sans', sans-serif;
+  color: #BD5D38;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.glightbox-clean .gslide-desc {
+  color: #fff;
+  font-size: 0.9rem;
+}
+</style>
+
+<!-- GLightbox JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Image Protection - Disable Right Click
+  document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Disable drag and drop for images
+  document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Disable common keyboard shortcuts for saving images
+  document.addEventListener('keydown', function(e) {
+    // Disable Ctrl+S (Save)
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault();
+      return false;
+    }
+    // Disable Ctrl+Shift+S (Save As)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 's') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Disable long press on mobile (iOS/Android)
+  let longPressTimer;
+  document.addEventListener('touchstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+      longPressTimer = setTimeout(function() {
+        e.preventDefault();
+      }, 500);
+    }
+  });
+
+  document.addEventListener('touchend', function() {
+    clearTimeout(longPressTimer);
+  });
+
+  document.addEventListener('touchmove', function() {
+    clearTimeout(longPressTimer);
+  });
+
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: false,
+    closeButton: true,
+    closeOnOutsideClick: true,
+    keyboardNavigation: true,
+    skin: 'clean',
+    zoomable: true,
+    draggable: true,
+    dragToleranceX: 40,
+    dragToleranceY: 65,
+    preload: true,
+    oneSlidePerOpen: false,
+    moreLength: 0
+  });
+
+  // Keyboard navigation enhancement
+  document.addEventListener('keydown', function(e) {
+    if (lightbox.isOpen) {
+      if (e.key === 'ArrowLeft') {
+        lightbox.prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        lightbox.nextSlide();
+      } else if (e.key === 'Escape') {
+        lightbox.close();
+      }
+    }
+  });
+
+  // Disable right-click on lightbox images
+  lightbox.on('open', function() {
+    setTimeout(function() {
+      const lightboxImages = document.querySelectorAll('.gslide-image img');
+      lightboxImages.forEach(function(img) {
+        img.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          return false;
+        });
+        img.setAttribute('draggable', 'false');
+        img.classList.add('no-select');
+      });
+    }, 100);
+  });
+});
+</script>
 {{ end }}
